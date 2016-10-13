@@ -10,3 +10,11 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
+
+# END WordPress
+AuthType Basic
+AuthName "Private zone"
+AuthUserFile /var/www/admin/pass/.htpasswd
+<Files wp-login.php>
+Require valid-user 
+</Files>
